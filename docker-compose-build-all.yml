@@ -9,9 +9,9 @@ services:
     build: ./services/hadoop-docker/2.6.5
     image: spafka/hadoop:2.6.5
 
-  hive-2.1.1:
-    build: ./services/hive-docker/2.1.1
-    image: spafka/hive:2.1.1
+#  hive-2.1.1:
+#    build: ./services/hive-docker/2.1.1
+#    image: spafka/hive:2.1.1
 
   spark-2.4.3:
     build: ./services/spark-docker/2.4.3

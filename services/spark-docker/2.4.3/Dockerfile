@@ -1,4 +1,4 @@
-FROM spafka/hive:2.1.1
+FROM spafka/hadoop:2.6.5
 
 MAINTAINER spafka <ruoyu-chen@foxmail.com>
 
@@ -9,7 +9,7 @@ ENV SPARK_HOME=/root/spark
 ENV PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin:.
 
 #安装spark 2.4.3
-RUN wgethttps://mirrors.aliyun.com/apache/spark/spark-2.4.3/spark-2.4.3-bin-without-hadoop-scala-2.12.tgz && \
+RUN wget https://mirrors.aliyun.com/apache/spark/spark-2.4.3/spark-2.4.3-bin-without-hadoop-scala-2.12.tgz && \
     tar -xzvf spark-2.4.3-bin-without-hadoop-scala-2.12.tgz -C /root/ && \
     mv /root/spark-2.4.3-bin-without-hadoop-scala-2.12 $SPARK_HOME && \
     rm -rf spark-2.4.3-bin-without-hadoop-scala-2.12.tgz && \
