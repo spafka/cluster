@@ -48,17 +48,17 @@ services:
           - hadoop-slave3
     tty: true
 
-  mysql:
-    image: mysql:5.7
-    volumes:
-      - "./volume/mysql:/var/lib/mysql"
-    container_name: mysql
-    hostname: mysql
-    networks:
-      - spark
-    environment:
-      - MYSQL_ROOT_PASSWORD=hadoop
-    tty: true
+#  mysql:
+#    image: mysql:5.7
+#    volumes:
+#      - "./volume/mysql:/var/lib/mysql"
+#    container_name: mysql
+#    hostname: mysql
+#    networks:
+#      - spark
+#    environment:
+#      - MYSQL_ROOT_PASSWORD=hadoop
+#    tty: true
 
   spark-master:
     image: spafka/spark:2.4.3
