@@ -21,7 +21,7 @@ RUN chmod 600 /root/.ssh/config && \
     chown root:root /root/.ssh/config
 
 #安装Protocol Buffer, Hadoop
-RUN wget http://archive.apache.org/dist/hadoop/core/hadoop-2.6.5/hadoop-2.6.5.tar.gz && \
+RUN wget https://mirrors.aliyun.com/apache/hadoop/core/hadoop-2.6.5/hadoop-2.6.5.tar.gz && \
 	tar -xzvf hadoop-2.6.5.tar.gz -C /root/ && \
     mv /root/hadoop-2.6.5 $HADOOP_HOME && \
     rm -rf hadoop-2.6.5.tar.gz && \
