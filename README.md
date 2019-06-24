@@ -2,8 +2,8 @@
 
 sed -i s/spafka/spafka/g `grep spafka -rl --include="*" ./`
 
-sed -i s/2.5.2/2.5.2/g `grep 2.5.2 -rl --include="*" ./`
-sed -i s/2.4.2/2.4.2/g `grep 2.4.2 -rl --include="*" ./`
+sed -i s/2.6.5/2.6.5/g `grep 2.6.5 -rl --include="*" ./`
+sed -i s/2.4.3/2.4.3/g `grep 2.4.3 -rl --include="*" ./`
 
 ## 0.内容
 1. 基本软件环境介绍
@@ -17,8 +17,8 @@ sed -i s/2.4.2/2.4.2/g `grep 2.4.2 -rl --include="*" ./`
 
 - 操作系统: CentOS 6
 - Java环境: OpenJDK 8
-- Hadoop: 2.5.2
-- Spark: 2.4.2
+- Hadoop: 2.6.5
+- Spark: 2.4.3
 - Hive: 2.1.1
 - HBase: 1.2.2
 - Zookeeper: 3.4.8
@@ -29,7 +29,7 @@ sed -i s/2.4.2/2.4.2/g `grep 2.4.2 -rl --include="*" ./`
 ###1.2 镜像依赖关系
 
 ![镜像依赖关系图](https://github.com/ruoyu-chen/hadoop-docker/raw/master/images/arch.jpeg "镜像依赖关系")
-上图中，灰色的镜像（centos:6）为docker hub官方基础镜像。其它镜像（spafka/hadoop:2.5.2等）都是在下层镜像的基础上实现的。这一镜像之间的依赖关系，决定了镜像的编译顺序.
+上图中，灰色的镜像（centos:6）为docker hub官方基础镜像。其它镜像（spafka/hadoop:2.6.5等）都是在下层镜像的基础上实现的。这一镜像之间的依赖关系，决定了镜像的编译顺序.
 
 ## 2.使用方法简介
 
@@ -53,17 +53,17 @@ sed -i s/2.4.2/2.4.2/g `grep 2.4.2 -rl --include="*" ./`
     
 `docker pull spafka/os-jvm:centos6-openjdk8`
 
-- 拉取Hadoop环境，包含Hadoop 2.5.2
+- 拉取Hadoop环境，包含Hadoop 2.6.5
 
-`docker pull spafka/hadoop:2.5.2`
+`docker pull spafka/hadoop:2.6.5`
 
 - 拉取Hive环境，包含Hive 2.1.1
 
 `docker pull spafka/hive:2.1.1`
 
-- 拉取Spark环境，包含Spark 2.4.2
+- 拉取Spark环境，包含Spark 2.4.3
 
-`docker pull spafka/spark:2.4.2`
+`docker pull spafka/spark:2.4.3`
 
 ###2.3 环境准备
 完成上一步的镜像编译工作后，在系统命令行中，可以使用docker images命令查看目前docker环境下的镜像，如下图所示：

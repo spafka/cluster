@@ -8,11 +8,11 @@ USER root
 ENV SPARK_HOME=/root/spark
 ENV PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin:.
 
-#安装spark 2.4.2
-RUN wget http://d3kbcqa49mib13.cloudfront.net/spark-2.4.2-bin-without-hadoop.tgz && \
-    tar -xzvf spark-2.4.2-bin-without-hadoop.tgz -C /root/ && \
-    mv /root/spark-2.4.2-bin-without-hadoop $SPARK_HOME && \
-    rm -rf spark-2.4.2-bin-without-hadoop.tgz && \
+#安装spark 2.4.3
+RUN wgethttps://mirrors.aliyun.com/apache/spark/spark-2.4.3/spark-2.4.3-bin-without-hadoop-scala-2.12.tgz && \
+    tar -xzvf spark-2.4.3-bin-without-hadoop-scala-2.12.tgz -C /root/ && \
+    mv /root/spark-2.4.3-bin-without-hadoop-scala-2.12 $SPARK_HOME && \
+    rm -rf spark-2.4.3-bin-without-hadoop-scala-2.12.tgz && \
     rm -rf $SPARK_HOME/bin/*.cmd && \
     rm -rf $SPARK_HOME/sbin/*.cmd && \
     rm -rf $SPARK_HOME/ec2 && \

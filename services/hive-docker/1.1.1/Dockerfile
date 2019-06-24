@@ -1,4 +1,4 @@
-FROM spafka/hadoop:2.5.2
+FROM spafka/hadoop:2.6.5
 
 MAINTAINER spafka <ruoyu-chen@foxmail.com>
 

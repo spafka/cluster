@@ -1,7 +1,7 @@
 version: '2'
 services:
   spark-slave1:
-    image: spafka/spark:2.4.2
+    image: spafka/spark:2.4.3
     container_name: spark-slave1
     volumes:
       - "./volume/hadoop/work/slave1:/works"
@@ -16,7 +16,7 @@ services:
     tty: true
   
   spark-slave2:
-    image: spafka/spark:2.4.2
+    image: spafka/spark:2.4.3
     container_name: spark-slave2
     volumes:
       - "./volume/hadoop/work/slave2:/works"
@@ -31,7 +31,7 @@ services:
     tty: true
 
   spark-slave3:
-    image: spafka/spark:2.4.2
+    image: spafka/spark:2.4.3
     container_name: spark-slave3
     volumes:
       - "./volume/hadoop/work/slave3:/works"
@@ -58,7 +58,7 @@ services:
     tty: true
 
   spark-master:
-    image: spafka/spark:2.4.2
+    image: spafka/spark:2.4.3
     ports:
       - "50070:50070"
       - "8088:8088"

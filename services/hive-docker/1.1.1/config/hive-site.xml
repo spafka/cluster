@@ -293,7 +293,7 @@
   </property>
   <property>
     <name>hive.exec.mode.local.auto.inputbytes.max</name>
-    <value>1342.5.28</value>
+    <value>1342.6.58</value>
     <description>When hive.exec.mode.local.auto is true, input bytes should less than this for local mode.</description>
   </property>
   <property>
