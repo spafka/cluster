@@ -1,0 +1,18 @@
+version: '2'
+services:
+
+  os7-jvm:
+    build: ./services/os-jvm-docker/centos7-openjdk8
+    image: spafka/os-jvm:centos7-openjdk8
+
+  hadoop:
+    build: ./services/hadoop-docker/2.5.2
+    image: spafka/hadoop:2.5.2
+
+  hive-2.1.1:
+    build: ./services/hive-docker/2.1.1
+    image: spafka/hive:2.1.1
+
+  spark-2.4.2:
+    build: ./services/spark-docker/2.4.2
+    image: spafka/spark:2.4.2
