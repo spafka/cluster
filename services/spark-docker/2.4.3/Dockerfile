@@ -22,4 +22,4 @@ RUN wget https://mirrors.aliyun.com/apache/spark/spark-2.4.3/spark-2.4.3-bin-wit
 #拷贝Spark配置文件
 COPY config/spark/* $SPARK_HOME/conf/
 
-CMD [ "sh", "-c", "systemctl enable sshd; bash"]
+CMD [ "sh", "-c", "service sshd start; bash"]

@@ -3,6 +3,7 @@ services:
   spark-slave1:
     image: spafka/spark:2.4.3
     container_name: spark-slave1
+    privileged: true
     volumes:
       - "./volume/hadoop/work/slave1:/works"
       - "./volume/hadoop/logs/slave1:/root/hadoop/logs/"
@@ -19,6 +20,7 @@ services:
   spark-slave2:
     image: spafka/spark:2.4.3
     container_name: spark-slave2
+    privileged: true
     volumes:
       - "./volume/hadoop/work/slave2:/works"
       - "./volume/hadoop/logs/slave2:/root/hadoop/logs/"
@@ -35,6 +37,7 @@ services:
   spark-slave3:
     image: spafka/spark:2.4.3
     container_name: spark-slave3
+    privileged: true
     volumes:
       - "./volume/hadoop/work/slave3:/works"
       - "./volume/hadoop/logs/slave3:/root/hadoop/logs/"
@@ -62,6 +65,7 @@ services:
 
   spark-master:
     image: spafka/spark:2.4.3
+    privileged: true
     ports:
       - "50070:50070"
       - "8088:8088"
