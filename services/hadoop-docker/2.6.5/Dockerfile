@@ -48,4 +48,4 @@ ADD config/hadoop/* $HADOOP_HOME/etc/hadoop/
 #    mkdir $HADOOP_HOME/logs && \
 #    $HADOOP_HOME/bin/hdfs namenode -format
 
-CMD [ "sh", "-c", "service sshd start; bash"]
+CMD [ "sh", "-c", "systemctl enable sshd; bash"]
